@@ -1,0 +1,497 @@
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,300;400;500&family=DM+Sans:wght@300;400;500&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  .resume {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-text-primary);
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .header {
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .name {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    color: var(--color-text-primary);
+    line-height: 1.1;
+  }
+
+  .tagline {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    letter-spacing: 0.08em;
+    margin-top: 6px;
+    text-transform: uppercase;
+  }
+
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .contact-item {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .contact-item span {
+    color: var(--color-text-info);
+    font-size: 11px;
+  }
+
+  .pitch {
+    background: var(--color-background-secondary);
+    border-left: 2px solid #1D9E75;
+    border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 13px;
+    color: var(--color-text-primary);
+    line-height: 1.65;
+  }
+
+  .pitch strong {
+    font-weight: 500;
+    color: #0F6E56;
+  }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.75rem;
+    padding-bottom: 4px;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+
+  .section { margin-bottom: 1.5rem; }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 8px;
+  }
+
+  .skill-group {
+    background: var(--color-background-primary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-md);
+    padding: 10px 12px;
+  }
+
+  .skill-group-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-secondary);
+    margin-bottom: 6px;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .tag {
+    font-size: 11px;
+    background: var(--color-background-secondary);
+    color: var(--color-text-primary);
+    border-radius: 4px;
+    padding: 2px 7px;
+    font-weight: 400;
+  }
+
+  .highlight-tag {
+    background: #E1F5EE;
+    color: #0F6E56;
+  }
+
+  .job {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+
+  .job:last-child { border-bottom: none; padding-bottom: 0; }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+
+  .job-title {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--color-text-primary);
+  }
+
+  .job-company {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    margin-top: 1px;
+  }
+
+  .job-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--color-text-secondary);
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .badge {
+    display: inline-block;
+    font-size: 10px;
+    font-family: 'DM Mono', monospace;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    background: #E1F5EE;
+    color: #0F6E56;
+    letter-spacing: 0.04em;
+  }
+
+  .badge-blue {
+    background: #E6F1FB;
+    color: #185FA5;
+  }
+
+  .badge-amber {
+    background: #FAEEDA;
+    color: #854F0B;
+  }
+
+  ul.bullets {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  ul.bullets li {
+    font-size: 12.5px;
+    color: var(--color-text-primary);
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.55;
+  }
+
+  ul.bullets li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #1D9E75;
+    font-size: 11px;
+    top: 1px;
+  }
+
+  .metric {
+    font-weight: 500;
+    color: #0F6E56;
+  }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .edu-item {
+    background: var(--color-background-primary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-md);
+    padding: 10px 14px;
+  }
+
+  .edu-degree {
+    font-weight: 500;
+    font-size: 13px;
+  }
+
+  .edu-school {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    margin-top: 2px;
+  }
+
+  .edu-year {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--color-text-secondary);
+    margin-top: 4px;
+  }
+
+  .availability-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #E1F5EE;
+    border-radius: var(--border-radius-md);
+    padding: 8px 14px;
+    margin-bottom: 1.5rem;
+  }
+
+  .avail-dot {
+    width: 8px;
+    height: 8px;
+    background: #1D9E75;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .avail-text {
+    font-size: 12px;
+    color: #0F6E56;
+    font-weight: 500;
+  }
+
+  .avail-sub {
+    font-size: 11px;
+    color: #0F6E56;
+    opacity: 0.8;
+    margin-left: auto;
+    font-family: 'DM Mono', monospace;
+  }
+
+  @media (max-width: 600px) {
+    .two-col { grid-template-columns: 1fr; }
+    .job-header { flex-direction: column; }
+    .job-meta { text-align: left; }
+  }
+</style>
+
+<div class="resume">
+
+  <div class="header">
+    <div class="name">Yash Shrivastava</div>
+    <div class="tagline">Founding Engineer · Backend & Real-Time Systems · 5 Years</div>
+    <div class="contact-row">
+      <div class="contact-item"><span>✉</span> ctrl.alt.yash@gmail.com</div>
+      <div class="contact-item"><span>☎</span> +91 7000136567</div>
+      <div class="contact-item"><span>in</span> LinkedIn</div>
+      <div class="contact-item"><span>gh</span> GitHub</div>
+      <div class="contact-item"><span>◎</span> Mumbai, India · Open to Remote</div>
+    </div>
+  </div>
+
+  <div class="availability-bar">
+    <div class="avail-dot"></div>
+    <div class="avail-text">Available for freelance & contract work</div>
+    <div class="avail-sub">Java · Python · Real-Time Systems · SaaS</div>
+  </div>
+
+  <div class="pitch">
+    Backend engineer specializing in <strong>real-time, event-driven systems</strong> and <strong>0→1 SaaS product builds</strong>. I've shipped production systems integrating hardware sensors, time-series databases, multi-channel alerting, and AI APIs — solo and as a founding-level team lead. If you need someone who can own the architecture and deliver end-to-end, I can do that.
+  </div>
+
+  <div class="section">
+    <div class="section-label">Core skills</div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-title">Backend</div>
+        <div class="skill-tags">
+          <span class="tag highlight-tag">Spring Boot</span>
+          <span class="tag highlight-tag">Python</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">Microservices</span>
+          <span class="tag">Java 17</span>
+          <span class="tag">TDD</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Data & Storage</div>
+        <div class="skill-tags">
+          <span class="tag highlight-tag">PostgreSQL</span>
+          <span class="tag highlight-tag">InfluxDB</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">MSSQL</span>
+          <span class="tag">Time-series</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Systems & Infra</div>
+        <div class="skill-tags">
+          <span class="tag highlight-tag">AWS</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Raspberry Pi / Edge</span>
+          <span class="tag">Grafana</span>
+          <span class="tag">Jenkins</span>
+          <span class="tag">Linux</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">AI & Integrations</div>
+        <div class="skill-tags">
+          <span class="tag highlight-tag">OpenAI API</span>
+          <span class="tag">Google Drive API</span>
+          <span class="tag">Swagger</span>
+          <span class="tag">RTSP Streaming</span>
+          <span class="tag">ReactJS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Freelance projects</div>
+
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">Real-Time Intrusion Detection Platform</div>
+          <div class="job-company">Fibre Optic Monitoring System · Founding Engineer & Lead Developer</div>
+        </div>
+        <div class="job-meta">Freelance · India</div>
+      </div>
+      <div style="margin-bottom:6px;">
+        <span class="badge">Spring Boot</span>
+        <span class="badge">InfluxDB</span>
+        <span class="badge">PostgreSQL</span>
+        <span class="badge">AWS</span>
+        <span class="badge">React</span>
+        <span class="badge">RTSP</span>
+        <span class="badge">Raspberry Pi</span>
+      </div>
+      <ul class="bullets">
+        <li>Designed and built a <span class="metric">production-grade real-time intrusion detection system</span> fusing fibre optic hardware with cloud + edge infrastructure, from architecture to on-site deployment</li>
+        <li>Built an event-driven backend ingesting high-frequency sensor data into InfluxDB/PostgreSQL; deployed edge nodes on Raspberry Pi with AWS-based cloud services</li>
+        <li>Engineered a <span class="metric">multi-channel alerting pipeline</span> (WhatsApp, Telegram, Email, ntfy) for real-time incident response</li>
+        <li>Delivered a live CCTV streaming integration (RTSP) and interactive map-based React dashboard for real-time event visualization</li>
+        <li>Led a cross-functional team of developers and hardware engineers end-to-end</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">Modular Business Operations SaaS Platform</div>
+          <div class="job-company">Multi-Tenant B2B SaaS · CTO / Founding Engineer</div>
+        </div>
+        <div class="job-meta">Freelance · India</div>
+      </div>
+      <div style="margin-bottom:6px;">
+        <span class="badge badge-blue">Python</span>
+        <span class="badge badge-blue">PostgreSQL</span>
+        <span class="badge badge-blue">React</span>
+        <span class="badge badge-blue">RBAC</span>
+        <span class="badge badge-blue">OpenAI</span>
+        <span class="badge badge-blue">Multi-tenant</span>
+      </div>
+      <ul class="bullets">
+        <li>Architected and led development of a <span class="metric">multi-tenant, plug-and-play SaaS platform</span> enabling businesses to digitize end-to-end operations (sales, purchasing, inventory)</li>
+        <li>Designed a modular feature system where customers activate purchased modules and build custom workflows — no developer required</li>
+        <li>Implemented fine-grained RBAC for multi-level org usage; built real-time pricing control with automated propagation to sales channels</li>
+        <li>Integrated <span class="metric">AI-powered features</span>: automated email classification and response drafting to prevent missed enquiries</li>
+        <li>Delivered forecasting, segmentation, and ROI analytics; multi-language support tailored for non-technical operational users</li>
+        <li>Led full cross-functional delivery across backend (Python), frontend (React), and database design</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">AI-Powered Document Processing API</div>
+          <div class="job-company">US Client · Freelance Backend Engineer</div>
+        </div>
+        <div class="job-meta">Freelance · Remote (US)</div>
+      </div>
+      <div style="margin-bottom:6px;">
+        <span class="badge badge-amber">Python</span>
+        <span class="badge badge-amber">OpenAI API</span>
+        <span class="badge badge-amber">REST APIs</span>
+        <span class="badge badge-amber">Google Drive API</span>
+        <span class="badge badge-amber">Swagger</span>
+      </div>
+      <ul class="bullets">
+        <li>Designed a Python-based API platform for document lifecycle management with <span class="metric">AI-driven content generation and summarization</span> using OpenAI APIs</li>
+        <li>Implemented session-aware paginated response handling for large AI outputs, with automatic aggregation and persistence</li>
+        <li>Built Swagger-documented RESTful APIs with Google Drive integration; delivered a fully extensible, developer-facing backend system</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="section">
+    <div class="section-label">Professional experience</div>
+
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">Full-Stack Developer</div>
+          <div class="job-company">NimbleWork (Digité) · Product SaaS</div>
+        </div>
+        <div class="job-meta">Apr 2023 – Present · Mumbai</div>
+      </div>
+      <ul class="bullets">
+        <li>Led monolith-to-microservices transformation; developed a new microservice from scratch using Spring Boot, ReactJS, and MongoDB</li>
+        <li>Built user analytics dashboard providing insights into product usage and retention; developed custom form automation rules from the ground up</li>
+        <li>Implemented anti-malware scanning for file uploads; automated onboarding outreach emails and multi-criteria notification services</li>
+        <li>End-to-end ownership: requirements → architecture → development → deployment, with TDD in Java 17 and ReactJS</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">Java Developer</div>
+          <div class="job-company">NimbleWork (Digité) · Product SaaS</div>
+        </div>
+        <div class="job-meta">Jul 2021 – Mar 2023 · Mumbai</div>
+      </div>
+      <ul class="bullets">
+        <li>Achieved a <span class="metric">65% reduction in database calls</span> through strategic refactoring of legacy code — most impactful performance improvement in the codebase</li>
+        <li>Delivered critical production fixes within tight 2-hour weekly release windows; handled complex MSSQL queries in production environments</li>
+        <li>Contributed new module development in Java 8; maintained seamless customer communication to resolve production defects</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="section">
+    <div class="section-label">Education</div>
+    <div class="two-col">
+      <div class="edu-item">
+        <div class="edu-degree">M.Tech · Embedded Systems</div>
+        <div class="edu-school">NIT Jaipur</div>
+        <div class="edu-year">2021 · Thesis: Quantum Pigeonhole & Pseudo-telepathy</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">B.E · Electronics & Telecommunications</div>
+        <div class="edu-school">Jabalpur Engineering College</div>
+        <div class="edu-year">2018</div>
+      </div>
+    </div>
+  </div>
+
+</div>
