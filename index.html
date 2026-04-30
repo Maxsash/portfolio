@@ -5,78 +5,79 @@
 </head>
 
 <body>
-<div class="resume">
+<div class="page-layout">
+  <aside class="side-nav" aria-label="Page sections">
+    <div class="nav-title">Sections</div>
+    <ul class="nav-list">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#work-experience">Work experience</a></li>
+      <li><a href="#freelance-projects">Freelance projects</a></li>
+      <li><a href="#college-projects">College projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+    </ul>
+  </aside>
+  <div class="resume" id="overview">
 
-  <div class="header">
-    <div class="name">Yash Shrivastava</div>
+    <div class="header">
+      <div class="name">Yash Shrivastava</div>
     <div class="tagline">Founding Engineer · Backend & Real-Time Systems · 5 Years</div>
-    <div class="contact-row">
-      <div class="contact-item"><span>✉</span> ctrl.alt.yash@gmail.com</div>
-      <div class="contact-item"><span>☎</span> +91 7000136567</div>
-      <div class="contact-item"><a href="https://www.linkedin.com/in/maxsash" target="_blank" rel="noopener noreferrer"><span>in</span> LinkedIn</a></div>
-      <div class="contact-item"><a href="https://www.github.com/maxsash" target="_blank" rel="noopener noreferrer"><span>gh</span> GitHub</a></div>
+      <div class="contact-row">
+        <div class="contact-item"><span>✉</span> ctrl.alt.yash@gmail.com</div>
+        <div class="contact-item"><span>☎</span> +91 7000136567</div>
+        <div class="contact-item"><a href="https://www.linkedin.com/in/maxsash" target="_blank" rel="noopener noreferrer"><span>in</span> LinkedIn</a></div>
+        <div class="contact-item"><a href="https://www.github.com/maxsash" target="_blank" rel="noopener noreferrer"><span>gh</span> GitHub</a></div>
+      </div>
     </div>
-  </div>
-
-  <div class="availability-bar">
-    <div class="avail-dot"></div>
-    <div class="avail-text">Available for freelance & contract work</div>
-    <div class="avail-sub">Java · Python · Real-Time Systems · SaaS</div>
-  </div>
 
   <div class="pitch">
-    Backend engineer specializing in <strong>real-time, event-driven systems</strong> and <strong>0→1 SaaS product builds</strong>. I've shipped production systems integrating hardware sensors, time-series databases, multi-channel alerting, and AI APIs — solo and as a founding-level team lead. If you need someone who can own the architecture and deliver end-to-end, I can do that.
+    Backend-focused engineer with 5+ years of experience building real-time, event-driven systems and scalable SaaS platforms. Proven track record of designing microservices, optimizing system performance (up to 65% reduction in DB load), and delivering end-to-end products from architecture to deployment. Experienced in Java, Spring Boot, and distributed data systems (PostgreSQL, InfluxDB). Strong ownership mindset with experience leading 0→1 product builds.
   </div>
 
-  <div class="section">
-    <div class="section-label">Core skills</div>
-    <div class="skills-grid">
-      <div class="skill-group">
-        <div class="skill-group-title">Backend</div>
-        <div class="skill-tags">
-          <span class="tag highlight-tag">Spring Boot</span>
-          <span class="tag highlight-tag">Python</span>
-          <span class="tag">REST APIs</span>
-          <span class="tag">Microservices</span>
-          <span class="tag">Java 17</span>
-          <span class="tag">TDD</span>
+  <div class="section" id="work-experience">
+    <div class="section-label">Work experience</div>
+
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">Full-stack Developer</div>
+          <div class="job-company">NimbleWork (Digité) · Product SaaS</div>
         </div>
+        <div class="job-meta">Apr 2023 – Present · Mumbai, India</div>
       </div>
-      <div class="skill-group">
-        <div class="skill-group-title">Data & Storage</div>
-        <div class="skill-tags">
-          <span class="tag highlight-tag">PostgreSQL</span>
-          <span class="tag highlight-tag">InfluxDB</span>
-          <span class="tag">MongoDB</span>
-          <span class="tag">MSSQL</span>
-          <span class="tag">Time-series</span>
+      <ul class="bullets">
+        <li>Developed a dashboard with user analytics giving insights into product usage and retention.</li>
+        <li>Built custom rules functionality on forms from the ground up, enabling flexible automation for users.</li>
+        <li>Developed and tested anti-malware scanning for file uploads.</li>
+        <li>Automated outreach emails for onboarding and re-engagement based on user interaction timing.</li>
+        <li>Owned notification and email services using scheduling, events, and multi-criteria triggers.</li>
+        <li>Delivered front-end, back-end, and deployment work after collaborating with product and design teams.</li>
+        <li>Contributed to monolith-to-microservices transformation, improving scalability and maintainability.</li>
+        <li>Built a new microservice from scratch using Spring Boot, ReactJS, and MongoDB.</li>
+        <li>Practiced TDD in Java 17 and ReactJS for robust, production-ready code.</li>
+        <li>Participated in architectural decisions and created class and sequence diagrams.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">Java Developer</div>
+          <div class="job-company">NimbleWork (Digité) · Product SaaS</div>
         </div>
+        <div class="job-meta">Jul 2021 – Mar 2023 · Mumbai, India</div>
       </div>
-      <div class="skill-group">
-        <div class="skill-group-title">Systems & Infra</div>
-        <div class="skill-tags">
-          <span class="tag highlight-tag">AWS</span>
-          <span class="tag">Docker</span>
-          <span class="tag">Raspberry Pi / Edge</span>
-          <span class="tag">Grafana</span>
-          <span class="tag">Jenkins</span>
-          <span class="tag">Linux</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-title">AI & Integrations</div>
-        <div class="skill-tags">
-          <span class="tag highlight-tag">OpenAI API</span>
-          <span class="tag">Google Drive API</span>
-          <span class="tag">Swagger</span>
-          <span class="tag">RTSP Streaming</span>
-          <span class="tag">ReactJS</span>
-        </div>
-      </div>
+      <ul class="bullets">
+        <li>Contributed to a new module in an existing web application using Java 8.</li>
+        <li>Worked extensively with MSSQL and handled complex production queries.</li>
+        <li>Released critical production fixes within a tight 2-hour weekly window.</li>
+        <li>Achieved a 65% reduction in database calls through strategic legacy refactoring.</li>
+        <li>Maintained customer communication while resolving defects and improving quality.</li>
+      </ul>
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="freelance-projects">
     <div class="section-label">Freelance projects</div>
 
     <div class="job">
@@ -97,11 +98,15 @@
         <span class="badge">Raspberry Pi</span>
       </div>
       <ul class="bullets">
-        <li>Designed and built a <span class="metric">production-grade real-time intrusion detection system</span> fusing fibre optic hardware with cloud + edge infrastructure, from architecture to on-site deployment</li>
-        <li>Built an event-driven backend ingesting high-frequency sensor data into InfluxDB/PostgreSQL; deployed edge nodes on Raspberry Pi with AWS-based cloud services</li>
-        <li>Engineered a <span class="metric">multi-channel alerting pipeline</span> (WhatsApp, Telegram, Email, ntfy) for real-time incident response</li>
-        <li>Delivered a live CCTV streaming integration (RTSP) and interactive map-based React dashboard for real-time event visualization</li>
-        <li>Led a cross-functional team of developers and hardware engineers end-to-end</li>
+        <li>Designed and built a production-ready real-time intrusion detection system integrating fibre optic sensing hardware with cloud and edge infrastructure.</li>
+        <li>Developed an event-driven backend using Spring Boot, PostgreSQL, and InfluxDB to ingest and process high-frequency sensor data.</li>
+        <li>Implemented edge + cloud architecture with on-site Raspberry Pi nodes and AWS-based notification services.</li>
+        <li>Built a multi-channel alerting system (WhatsApp, Telegram, Email, ntfy) for real-time incident notifications.</li>
+        <li>Engineered live CCTV streaming pipeline (RTSP) and integrated video feeds into a React-based monitoring dashboard.</li>
+        <li>Created an interactive map-based UI to visualize intrusion events and system status in real time.</li>
+        <li>Designed user and notification management systems with secure authentication.</li>
+        <li>Collaborated directly with hardware engineers to align software with fibre optic sensing modules.</li>
+        <li>Led a team of developers and drove end-to-end delivery from requirements to on-site deployment.</li>
       </ul>
     </div>
 
@@ -122,20 +127,26 @@
         <span class="badge badge-blue">Multi-tenant</span>
       </div>
       <ul class="bullets">
-        <li>Architected and led development of a <span class="metric">multi-tenant, plug-and-play SaaS platform</span> enabling businesses to digitize end-to-end operations (sales, purchasing, inventory)</li>
-        <li>Designed a modular feature system where customers activate purchased modules and build custom workflows — no developer required</li>
-        <li>Implemented fine-grained RBAC for multi-level org usage; built real-time pricing control with automated propagation to sales channels</li>
-        <li>Integrated <span class="metric">AI-powered features</span>: automated email classification and response drafting to prevent missed enquiries</li>
-        <li>Delivered forecasting, segmentation, and ROI analytics; multi-language support tailored for non-technical operational users</li>
-        <li>Led full cross-functional delivery across backend (Python), frontend (React), and database design</li>
+        <li>Led architecture and development of a multi-tenant, modular SaaS platform enabling businesses to digitize end-to-end operations.</li>
+        <li>Designed a plug-and-play module system allowing customers to enable purchased features and build custom workflows.</li>
+        <li>Built core systems for sales, purchasing, inventory, and data management to replace manual processes.</li>
+        <li>Implemented fine-grained authentication and role-based access control for multi-level organizational usage.</li>
+        <li>Developed dynamic dashboards driven by module-level data and business workflows.</li>
+        <li>Engineered modules for real-time pricing control and automatic propagation to sales systems.</li>
+        <li>Created validation and approval layers for transactional oversight on orders.</li>
+        <li>Delivered multi-language support and intuitive UX for operational users.</li>
+        <li>Integrated analytics features including forecasting, segmentation, and ROI insights.</li>
+        <li>Built AI-powered automated email classification and response drafting to prevent missed enquiries.</li>
+        <li>Led cross-functional delivery across backend (Python), frontend (React), and database design (PostgreSQL).</li>
+        <li>Collaborated closely with business stakeholders to translate requirements into scalable software systems.</li>
       </ul>
     </div>
 
     <div class="job">
       <div class="job-header">
         <div>
-          <div class="job-title">AI-Powered Document Processing API</div>
-          <div class="job-company">US Client · Freelance Backend Engineer</div>
+          <div class="job-title">AI-Powered Document Processing API Platform</div>
+          <div class="job-company">Freelance Backend Engineer · US Client</div>
         </div>
         <div class="job-meta">Freelance · Remote (US)</div>
       </div>
@@ -147,66 +158,178 @@
         <span class="badge badge-amber">Swagger</span>
       </div>
       <ul class="bullets">
-        <li>Designed a Python-based API platform for document lifecycle management with <span class="metric">AI-driven content generation and summarization</span> using OpenAI APIs</li>
-        <li>Implemented session-aware paginated response handling for large AI outputs, with automatic aggregation and persistence</li>
-        <li>Built Swagger-documented RESTful APIs with Google Drive integration; delivered a fully extensible, developer-facing backend system</li>
-      </ul>
-    </div>
-
-  </div>
-
-  <div class="section">
-    <div class="section-label">Professional experience</div>
-
-    <div class="job">
-      <div class="job-header">
-        <div>
-          <div class="job-title">Full-Stack Developer</div>
-          <div class="job-company">NimbleWork (Digité) · Product SaaS</div>
-        </div>
-        <div class="job-meta">Apr 2023 – Present · Mumbai</div>
-      </div>
-      <ul class="bullets">
-        <li>Led monolith-to-microservices transformation; developed a new microservice from scratch using Spring Boot, ReactJS, and MongoDB</li>
-        <li>Built user analytics dashboard providing insights into product usage and retention; developed custom form automation rules from the ground up</li>
-        <li>Implemented anti-malware scanning for file uploads; automated onboarding outreach emails and multi-criteria notification services</li>
-        <li>End-to-end ownership: requirements → architecture → development → deployment, with TDD in Java 17 and ReactJS</li>
+        <li>Designed and developed a Python-based API platform for document management and AI-driven content generation.</li>
+        <li>Integrated OpenAI APIs for document summarization and dynamic text generation workflows.</li>
+        <li>Built RESTful APIs with Swagger-based interface for seamless developer testing.</li>
+        <li>Implemented session-aware paginated response handling for large AI-generated outputs with aggregation and persistence.</li>
+        <li>Developed document lifecycle features including creation, retrieval, filtering, and storage.</li>
+        <li>Enabled contextual summarization based on user-supplied inputs like name and location.</li>
+        <li>Integrated external storage workflows with Google Drive APIs.</li>
+        <li>Delivered a backend-driven system focused on API usability and extensibility.</li>
       </ul>
     </div>
 
     <div class="job">
       <div class="job-header">
         <div>
-          <div class="job-title">Java Developer</div>
-          <div class="job-company">NimbleWork (Digité) · Product SaaS</div>
+          <div class="job-title">Real-Time Monitoring & Intrusion Detection Prototype</div>
+          <div class="job-company">Backend / Systems Engineer</div>
         </div>
-        <div class="job-meta">Jul 2021 – Mar 2023 · Mumbai</div>
+        <div class="job-meta">Prototype · Grafana + InfluxDB</div>
+      </div>
+      <div style="margin-bottom:6px;">
+        <span class="badge badge-blue">InfluxDB</span>
+        <span class="badge badge-blue">Grafana</span>
+        <span class="badge badge-blue">Python</span>
+        <span class="badge badge-blue">Telegram</span>
+        <span class="badge badge-blue">ntfy</span>
       </div>
       <ul class="bullets">
-        <li>Achieved a <span class="metric">65% reduction in database calls</span> through strategic refactoring of legacy code — most impactful performance improvement in the codebase</li>
-        <li>Delivered critical production fixes within tight 2-hour weekly release windows; handled complex MSSQL queries in production environments</li>
-        <li>Contributed new module development in Java 8; maintained seamless customer communication to resolve production defects</li>
+        <li>Developed an early real-time monitoring and intrusion detection prototype using InfluxDB and Grafana.</li>
+        <li>Built a live analytics dashboard visualizing sensor data, intrusion events, and system metrics.</li>
+        <li>Implemented geospatial visualization for real-time intrusion tracking.</li>
+        <li>Designed a multi-layer alerting system combining Grafana native alerts with custom Python notifications.</li>
+        <li>Enabled live data ingestion and querying for time-series analysis.</li>
+        <li>Delivered a lightweight, rapidly deployable system to validate feasibility and client needs.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section" id="college-projects">
+    <div class="section-label">College projects</div>
+
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">Investigation of Quantum Pigeonhole Conundrum and Quantum Pseudo-telepathy</div>
+          <div class="job-company">Master's Thesis</div>
+        </div>
+      </div>
+      <ul class="bullets">
+        <li>Investigated paradoxes and mathematical properties within the quantum pigeonhole principle and pseudo-telepathy.</li>
       </ul>
     </div>
 
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">NsBoard: Quantum Network to Play Board Games</div>
+          <div class="job-company">College Project</div>
+        </div>
+      </div>
+      <ul class="bullets">
+        <li>Built a network with a Taskmaster node coordinating shared game state for multiple players.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">Ergonomic Controller Design for Helicopters</div>
+          <div class="job-company">Bachelor's Major Project</div>
+        </div>
+      </div>
+      <ul class="bullets">
+        <li>Designed controls to improve pilot comfort when using unfamiliar helicopter flight hardware.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">Duolingo-Bot</div>
+          <div class="job-company">Personal Automation Project</div>
+        </div>
+      </div>
+      <ul class="bullets">
+        <li>Built a bot that automates Duolingo German lessons, detects failures, and resets itself for continuous progress.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">Triangle-based Linear Regression</div>
+          <div class="job-company">Algorithm Implementation</div>
+        </div>
+      </div>
+      <ul class="bullets">
+        <li>Implemented a unique triangle-based RANSAC variation instead of the conventional L2 distance.</li>
+      </ul>
+    </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="skills">
+    <div class="section-label">Skills</div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-title">Languages</div>
+        <div class="skill-tags">
+          <span class="tag highlight-tag">Java</span>
+          <span class="tag highlight-tag">Python</span>
+          <span class="tag">JavaScript</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Backend</div>
+        <div class="skill-tags">
+          <span class="tag highlight-tag">Spring Boot</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">Microservices</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Frontend</div>
+        <div class="skill-tags">
+          <span class="tag highlight-tag">ReactJS</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Data & Storage</div>
+        <div class="skill-tags">
+          <span class="tag highlight-tag">PostgreSQL</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">MSSQL</span>
+          <span class="tag">InfluxDB</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Systems & Tools</div>
+        <div class="skill-tags">
+          <span class="tag highlight-tag">Docker</span>
+          <span class="tag">Grafana</span>
+          <span class="tag">Jenkins</span>
+          <span class="tag">Linux</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Concepts</div>
+        <div class="skill-tags">
+          <span class="tag highlight-tag">Distributed Systems</span>
+          <span class="tag">Event-Driven Architecture</span>
+          <span class="tag">TDD</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="education">
     <div class="section-label">Education</div>
     <div class="two-col">
       <div class="edu-item">
         <div class="edu-degree">M.Tech · Embedded Systems</div>
         <div class="edu-school">NIT Jaipur</div>
-        <div class="edu-year">2021 · Thesis: Quantum Pigeonhole & Pseudo-telepathy</div>
+        <div class="edu-year">June 2021</div>
       </div>
       <div class="edu-item">
-        <div class="edu-degree">B.E · Electronics & Telecommunications</div>
+        <div class="edu-degree">B.E · Electronics and Telecommunications</div>
         <div class="edu-school">Jabalpur Engineering College</div>
-        <div class="edu-year">2018</div>
+        <div class="edu-year">June 2018</div>
       </div>
     </div>
   </div>
 
+</div>
 </div>
 
 </body>
