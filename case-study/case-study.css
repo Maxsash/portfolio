@@ -9,6 +9,23 @@
   color: var(--color-text-primary);
 }
 
+.back-button {
+  display: inline-block;
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: #1D9E75;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #178a63;
+}
+
 .case-study-header {
   margin-bottom: 2.5rem;
   border-bottom: 2px solid #1D9E75;
