@@ -275,4 +275,39 @@
   .problem-solution-grid {
     grid-template-columns: 1fr;
   }
+
+  .back-button {
+    padding: 0.75rem 1.25rem;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .case-study {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .case-study-title {
+    font-size: 28px;
+  }
+
+  .case-study-section-title {
+    font-size: 18px;
+  }
+
+  .tech-badge {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .overview-box p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .back-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 17px;
+    margin-bottom: 1.5rem;
+  }
 }

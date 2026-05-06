@@ -357,9 +357,72 @@ ul.bullets li::before {
   }
 
   .side-nav {
-    position: static;
-    top: auto;
-    margin-bottom: 1rem;
+    display: none;
+  }
+
+  .name {
+    font-size: 28px;
+  }
+
+  .resume {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-layout {
+    padding: 1rem;
+  }
+
+  .side-nav {
+    padding: 0.75rem;
+  }
+
+  .nav-list a {
+    padding: 0.75rem;
+    font-size: 14px;
+  }
+
+  .name {
+    font-size: 24px;
+  }
+
+  .tagline {
+    font-size: 10px;
+  }
+
+  .resume {
+    font-size: 15px;
+    padding: 1rem;
+  }
+
+  .job-title {
+    font-size: 16px;
+  }
+
+  .job-company {
+    font-size: 14px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 6px;
+  }
+
+  .skill-group {
+    padding: 8px 10px;
+  }
+
+  .tag {
+    padding: 3px 8px;
+  }
+
+  .highlight-tag {
+    padding: 3px 8px;
   }
 }
 
@@ -367,4 +430,44 @@ ul.bullets li::before {
   .two-col { grid-template-columns: 1fr; }
   .job-header { flex-direction: column; }
   .job-meta { text-align: left; }
+
+  .page-layout {
+    padding: 0.75rem;
+  }
+
+  .name {
+    font-size: 22px;
+  }
+
+  .resume {
+    font-size: 16px;
+    padding: 0.75rem;
+  }
+
+  .nav-list a {
+    padding: 0.8rem;
+    font-size: 15px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .job-title {
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .tag {
+    padding: 4px 10px;
+    font-size: 13px;
+  }
+
+  .highlight-tag {
+    padding: 4px 10px;
+    font-size: 13px;
+  }
 }
